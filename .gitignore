@@ -1,0 +1,4 @@
+.vscode/
+data/raw_csv/*.csv
+data/crmls_listed.py
+data/crmls_sold.py
