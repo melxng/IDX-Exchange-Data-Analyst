@@ -1,6 +1,6 @@
 .vscode/
 data/raw_csv/*.csv
-data/crmls_listed.py
-data/crmls_sold.py
+data/py/crmls_listed.py
+data/py/crmls_sold.py
 
 data/processed_csv/*.csv
