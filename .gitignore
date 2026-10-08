@@ -4,3 +4,5 @@ data/py/crmls_listed.py
 data/py/crmls_sold.py
 
 data/processed_csv/*.csv
+data/reports/*.csv
+data/cleaned_csv/*.csv
