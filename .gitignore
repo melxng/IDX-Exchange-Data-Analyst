@@ -6,3 +6,6 @@ data/py/crmls_sold.py
 data/processed_csv/*.csv
 data/reports/*.csv
 data/cleaned_csv/*.csv
+data/school_districts/*
+data/reports/week6_reports/*.csv
+data/feature_engineered/*.csv

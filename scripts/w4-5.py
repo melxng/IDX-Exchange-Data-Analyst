@@ -448,16 +448,42 @@ sold["invalid_numeric_flag"] = (
 )
 
 
+# ------------------------------------
+# remove flagged values
+# ------------------------------------
+
+invalid_columns = [
+    "invalid_close_price",
+    "invalid_living_area",
+    "invalid_days_on_market",
+    "invalid_bedrooms",
+    "invalid_bathrooms"
+]
+
+sold["invalid_numeric_flag"] = sold[invalid_columns].any(axis=1)
+listing["invalid_numeric_flag"] = listing[invalid_columns].any(axis=1)
+
+sold_cleaned = sold[~sold["invalid_numeric_flag"]].copy()
+listing_cleaned = listing[~listing["invalid_numeric_flag"]].copy()
+
+
 # save reports
 
+report_dir = Path("../data/reports")
+report_dir.mkdir(exist_ok=True)
+
 invalid_numeric_summary_listing.to_csv(
-    report_dir / "week4_5_listing_invalid_numeric_summary.csv"
+    report_dir / "week4_5_invalid_numeric_summary.csv"
 )
 
 invalid_numeric_summary_sold.to_csv(
-    report_dir / "week4_5_sold_invalid_numeric_summary.csv"
+    report_dir / "week4_5_invalid_numeric_summary.csv"
 )
 
-date_summary_listing.to_csv(
-    report_dir / "week4_5_listing_date_summary.csv"
+geo_summary_listing.to_csv(
+    report_dir / "week4_5_geographic_summary.csv"
+)
+
+geo_summary_sold.to_csv(
+    report_dir / "week4_5_geographic_summary.csv"
 )
