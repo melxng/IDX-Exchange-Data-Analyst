@@ -9,3 +9,5 @@ data/cleaned_csv/*.csv
 data/school_districts/*
 data/reports/week6_reports/*.csv
 data/feature_engineered/*.csv
+data/outlier_analysis/*.csv
+data/reports/week7_reports/*.csv
